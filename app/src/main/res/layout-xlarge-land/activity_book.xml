@@ -94,13 +94,11 @@
         app:layout_constraintStart_toEndOf="@id/guideline_vertical"
         app:layout_constraintTop_toTopOf="@id/meeting_datetime">
 
-        <TextView
+        <EditText
             android:id="@+id/tv_MeetingDate"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
-            android:clickable="true"
-            android:focusable="false"
             android:gravity="start"
             android:hint="@string/date"
             android:maxLines="1"

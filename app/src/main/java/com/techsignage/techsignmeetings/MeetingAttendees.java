@@ -305,7 +305,8 @@ public class MeetingAttendees extends CoreActivity {
                                                                           String MeetingDate = String.format("%s | %s - %s", Globals.format3_ar.format(startdate), Globals.format1_ar.format(startdate), Globals.format1_ar.format(enddate));
                                                                           tv_MeetingDate.setText(MeetingDate);
                                                                       } else {
-                                                                          String MeetingDate = String.format("%s | %s - %s", Globals.format3_ar.format(startdate), Globals.format1_ar.format(startdate), Globals.format1_ar.format(enddate));
+                                                                          String MeetingDate = String.format("%s | %s - %s", Globals.format3.format(startdate), Globals.format1.format(startdate),
+                                                                                  Globals.format1.format(enddate));
                                                                           tv_MeetingDate.setText(MeetingDate);
                                                                       }
 

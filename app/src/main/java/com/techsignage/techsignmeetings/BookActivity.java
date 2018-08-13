@@ -61,7 +61,7 @@ import rx.schedulers.Schedulers;
 public class BookActivity extends CoreActivity {
 
     @BindView(R.id.tv_MeetingDate)
-    TextView tv_MeetingDate;
+    EditText tv_MeetingDate;
     @BindView(R.id.tv_MeetingTime)
     TextView tv_MeetingTime;
     @BindView(R.id.constraintTime)

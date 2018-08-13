@@ -92,16 +92,16 @@
         app:layout_constraintStart_toEndOf="@id/guideline_vertical"
         app:layout_constraintTop_toTopOf="@id/meeting_datetime">
 
-        <TextView
+        <EditText
             android:id="@+id/tv_MeetingDate"
             android:layout_width="200dp"
             android:layout_height="42dp"
             android:background="@drawable/border"
             android:clickable="true"
-            android:focusable="false"
             android:gravity="start"
             android:hint="@string/date"
             android:maxLines="1"
+            android:textStyle="bold"
             android:paddingBottom="10dp"
             android:paddingLeft="15dp"
             android:paddingStart="15dp"
@@ -109,7 +109,6 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="@dimen/textview_small_size"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
