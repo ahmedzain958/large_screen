@@ -318,7 +318,7 @@ public class MeetingAttendees extends CoreActivity {
                                                                   assert activerequestslist != null;
                                                                   adapter = new AttendeesAdapter(MeetingAttendees.this, meetingModel.meeting.CanCheckin, meetingModel.meeting.CanCheckOut, showbtns_check);
                                                                   //adapter.setLst(meetingModels);
-                                                                  adapter.setLst(meetingModel.meeting.ATTENDEES);
+                                                                  adapter.setLst(meetingModel.meeting.ATTENDEES); 
                                                                   activerequestslist.setAdapter(adapter);
 
                                                                   LinearLayoutManager llm = new LinearLayoutManager(MeetingAttendees.this);
