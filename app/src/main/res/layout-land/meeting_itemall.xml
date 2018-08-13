@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_line"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_meetingtitle"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight=".25"
+        android:gravity="start"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#a6d2ef" />
+
+    <TextView
+        android:id="@+id/tv_meetingdate"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight=".25"
+        android:gravity="start"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#a6d2ef" />
+
+    <TextView
+        android:id="@+id/tv_meetingorganizer"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight=".25"
+        android:gravity="start"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#a6d2ef" />
+
+    <TextView
+        android:id="@+id/tv_meetingroom"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight=".25"
+        android:gravity="start"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+</LinearLayout>

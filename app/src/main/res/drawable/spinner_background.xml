@@ -1,0 +1,13 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke android:width="5dp" android:color="#fff" />
+                    <corners android:radius="@dimen/_222sdp" />
+                </shape>
+
+            </item>
+        </layer-list>
+    </item>
+</selector>

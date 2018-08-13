@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">TechSignMeetings</string>
+    <string name="room_name">Hall</string>
+    <string name="firstmeeting_title">No Meetings</string>
+    <string name="firstmeeting_date"> </string>
+    <string name="firstmeeting_datenew">12:45 &#8211; 13:45</string>
+    <string name="next">Next</string>
+    <string name="secondmeeting_title">No Meetings</string>
+    <string name="secondmeeting_date"> </string>
+    <string name="startmeeting">Start Meeting</string>
+    <string name="endmeeting">End Meeting</string>
+    <string name="processing">Processing</string>
+    <string name="meetingslist">Meetings List</string>
+    <string name="meeting_title">Meeting Title</string>
+    <string name="meeting_datetime">Date/Time</string>
+    <string name="meeting_organizer">Organizer</string>
+    <string name="meeting_attendees">Attendees</string>
+    <string name="checkin">Check In</string>
+    <string name="checkout">Check Out</string>
+    <string name="signin">Sign In</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="back">Back</string>
+    <string name="previous">Previous</string>
+    <string name="nopermission">No Permission</string>
+    <string name="selectrange">Select Time Range</string>
+    <string name="book">Book</string>
+    <string name="expired">Expired</string>
+    <string name="booked">Booked</string>
+    <string name="notstarted">Meeting has not started yet or has expired</string>
+    <string name="notcheckin">You have to check in as a first step</string>
+    <string name="terminalName">Terminal Name</string>
+    <string name="save">Save</string>
+    <string name="deviceidentifier">Device Identifier</string>
+    <string name="validate">Validate</string>
+    <string name="licenseinformation">License Information</string>
+    <string name="error_network_timeout">Network Connection Error</string>
+    <string name="todays">Today\'s Meetings</string>
+    <string name="room">Room</string>
+    <string name="list">Meeting List</string>
+    <string name="orangeroom">Orange Room</string>
+    <string name="meetingdatenew">12:45</string>
+    <string name="meetingfulldatenew">Wed, 15/11/2017</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="selectadjacentslots">Select adjacent slots</string>
+    <string name="unselectadjacentslots">Unselect one of the adjacent slots</string>
+    <string name="chooseroom">Choose Room</string>
+    <string name="date">Date</string>
+    <string name="from">From</string>
+    <string name="to">to</string>
+    <string name="enter_username">Enter User Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="meeting_held">Meeting is held ..</string>
+    <string name="meeting_details">Meeting Details</string>
+    <string name="book_meeting">Book Meeting</string>
+    <string name="time">Time</string>
+    <string name="Cance">cancel</string>
+    <string name="timeline">Enter time using timeline </string>
+
+    <string-array name="test">
+        <item >AAAA</item>
+        <item >AAAA</item>
+    </string-array>
+
+</resources>
