@@ -4,6 +4,8 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.DialogFragment;
@@ -66,6 +68,7 @@ public class BookActivity extends CoreActivity {
     TextView tv_MeetingTime;
     @BindView(R.id.constraintTime)
     ConstraintLayout constraintTime;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
 
     /*@BindView(R.id.tv_NowDate)
     TextView tv_NowDate;*/
@@ -525,34 +528,38 @@ public class BookActivity extends CoreActivity {
 //            }
 //        }, 180000);
 //
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                selectedDate = Calendar.getInstance();
+                selectedDate.set(Calendar.YEAR, year);
+                selectedDate.set(Calendar.MONTH, month);
+                selectedDate.set(Calendar.DAY_OF_MONTH, day);
+                tv_MeetingDate.setText(new SimpleDateFormat("dd/MM/yyyy").format(selectedDate.getTime()));
+
+                MeetingModel meetingModel = new MeetingModel();
+                meetingModel.TheDate = new SimpleDateFormat("dd/MM/yyyy").format(selectedDate.getTime());
+                meetingModel.UNIT_ID = Globals.unitId;
+                meetingModel.Lang = Globals.lang;
+                structCalendar(callback, mRecyclerView, meetingModel);
+            }
+        };
         setTimer();
     }
 
     private void showDatePicker() {
-        DatePickerFragment newFragment = new DatePickerFragment();
-        newFragment.setListener(new DataReady() {
-            @Override
-            public void OnReady(int year, int month, int day) {
-                if (tv_MeetingDate != null) {
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
 
-                    selectedDate = Calendar.getInstance();
-                    selectedDate.set(Calendar.YEAR, year);
-                    selectedDate.set(Calendar.MONTH, month);
-                    selectedDate.set(Calendar.DAY_OF_MONTH, day);
-                    tv_MeetingDate.setText(new SimpleDateFormat("dd/MM/yyyy").format(selectedDate.getTime()));
-
-                    MeetingModel meetingModel = new MeetingModel();
-                    meetingModel.TheDate = new SimpleDateFormat("dd/MM/yyyy").format(selectedDate.getTime());
-                    meetingModel.UNIT_ID = Globals.unitId;
-                    meetingModel.Lang = Globals.lang;
-                    structCalendar(callback, mRecyclerView, meetingModel);
-
-                    tv_MeetingDate.setText(year + " / " + (month + 1) + " / " + day);
-
-                }
-            }
-        });
-        newFragment.show(getSupportFragmentManager(), "datePicker");
+        DatePickerDialog dialog = new DatePickerDialog(
+                BookActivity.this,
+                android.R.style.Theme_Holo_Light,
+                mDateSetListener,
+                year, month, day);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
     private void showTimePicker() {
